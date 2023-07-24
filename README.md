@@ -281,13 +281,17 @@
 
 > * 왜도 값을 확인하여 변수가 대칭인지 아닌지를 파악하고, 대칭이 아닌 경우 데이터 변환을 고려할 수 있다. 로그 변환, 제곱근 변환, Box-Cox 변환 등을 사용하여 데이터를 변환하면 대칭성을 높일 수 있다. 이를 통해 분석의 정확성을 높이고 모델의 성능을 개선할 수 있다.
 
+<br><br>
+
 #### 6-b) 로그 변환을 통한 왜도 제거
-##### 로그 변환
+##### b-1) 로그 변환
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/10a431d6-2dfc-412b-98e9-aa7724541234></h3>
 
 * 로그 변환을 수행하고 날짜를 표준화
 
-##### 왜도 제거
+<br><br>
+
+##### b-2) 왜도 제거
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7dd4ad0a-e1c6-434f-babe-5ee698b0875b></h3>
 
 
