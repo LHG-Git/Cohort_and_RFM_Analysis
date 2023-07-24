@@ -35,10 +35,13 @@
 <br><br>
 
 # 💡 분석 기획
-* 해양오염지수를 예측하고, 해양오염 문제를 미리 예방에 일조<br>
-* 2019~2020년 약 2년치의 해양환경측정 데이터를 활용하여 분석, EDA, 모델링 및 예측 수행, 프로젝트의 전체적인 흐름 및 아키텍처 구상<br>
-* 통계 분석, 머신러닝 등 다양한 분석 방법을 활용하여 해양오염지수 예측<br><br>
-<br>
+* 해양오염지수를 예측하고, 해양오염 문제를 미리 예방에 일조
+  
+* 2019~2020년 약 2년치의 해양환경측정 데이터를 활용하여 분석, EDA, 모델링 및 예측 수행, 프로젝트의 전체적인 흐름 및 아키텍처 구상
+  
+* 통계 분석, 머신러닝 등 다양한 분석 방법을 활용하여 해양오염지수 예측
+  
+<br><br>
 
 # 🔥 목표
 * 가치가 높은 고객 기반, 즉 성장 잠재력이 가장 높거나 수익성이 가장 높은 고객을 식별하는 것
@@ -72,14 +75,14 @@
 <br>
 
 ## 2) 고객과 상품
-### 1) 총 제품 수(Stock code), 거래 수(InvoiceNo), 고객 수(CustomerID) 파악
+### 2-a) 총 제품 수(Stock code), 거래 수(InvoiceNo), 고객 수(CustomerID) 파악
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/72805b80-36c0-4469-b778-bba6c5bd882f></h3>
 
-* 약 4,300명의 고객, 3,700개의 제품, 2,2000건의 거래 건을 확인
+* 약 4,300명의 고객, 3,700개의 제품, 22,000건의 거래 건을 확인
 
 <br>
 
-### 2) 모든 거래에서 구매한 제품의 수를 확인
+### 2-b) 모든 거래에서 구매한 제품의 수를 확인
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/110061e7-676a-4678-b9e4-ca7c67694eac></h3>
 
 ##### Insights
@@ -92,9 +95,30 @@
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/be3b198e-8fa4-4f70-9e09-79ae517d72ba></h3>
 
 * 약 16.47% 의 주문이 취소됨
+ 
 <br>
 
+## 3) Stock Code
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/b3b8c676-125f-447a-8caa-73d968d7e5de></h3>
 
+* POST의 수가 가장 많고, 그 뒤로 M, C2가 뒤를 잇는다는 것을 확인
+
+<br>
+
+## 4) 총 구매 금액
+### 4-a
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/e1cbe6f4-cff7-43a2-8e2d-f557f05e3ebc></h3>
+
+* 대부분 낮은 금액의 구매로 이루어진 것을 확인
+
+<br>
+
+### 4-b
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/48d5eee7-49f4-4f05-bd20-db2aaac42804></h3>
+
+* 영국을 제외한 국가들의 주문 수 확인
+
+<br><br>
 
 # 📄 Modeling
 ## 1) 군집화
