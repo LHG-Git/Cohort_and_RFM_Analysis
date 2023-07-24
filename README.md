@@ -132,20 +132,38 @@
 
 <br><br>
 
-#### 2) 'InvoiceDate'와 'CohortMonth' 열 사이의 날짜 차이를 계산
+#### 2) 열 생성 및 그룹화
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/4d17cbbb-c335-4620-a8a4-052393100f60></h3>
+
+* 'CohortMonth'라는 열을 생성하여 각 거래의 InvoiceDate의 해당 월의 첫 번째 날짜를 사용하여 거래가 이루어진 월을 나타냄 
+
+* 그런 다음, 각 고객별로 첫 번째 거래 월에 대한 정보를 추출하고 그룹화함
+
+<br><br>
+
+#### 3) 최초 구매 후 재구매한 달
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/67475f09-e29d-44f4-b87b-9b6cb79ad171></h3>
+
+* InvoiceMonth와 CohortMonth 열 사이의 차이를 월 수로 계산하여 CohortIndex를 구함
+  
+* CohortIndex는 초기 구매 후 재구매가 일어난 월에 대한 정보를 알려줌
+  
+* 즉, 고객이 최초 구매한 후 얼마나 지나서 재구매를 했는지를 나타내는 지표
+
+<br><br>
+
+#### 4) 코호트 분석 매트릭스
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7435b6e0-dcf2-42a5-ab2e-b12babf8e98a></h3>
 
-* 날짜 차이를 30으로 나누어 월 단위로 변환
+* CohortMonth 및 CohortIndex별로 데이터를 그룹화하고 CustomerID 열에 집계하여 코호트 분석 매트릭스를 얻음
+  
+* 이를 통해 각 CohortMonth(고객들이 처음 구매한 월)와 CohortIndex(초기 구매 후 재구매한 월까지의 기간)에 따른 고객들의 그룹화된 데이터를 확인할 수 있음
 
-* dt.days를 통해 소수점을 버리고 정수형 데이터로 반환
+* 이를 통해 해당 기간에 재구매한 고객들의 행동을 파악할 수 있음
 
-* 정수형 데이터로 형변환
+<br><br>
 
-* 0은 첫 번째 달(기준 달)을 의미
-
-<br>
-
-##### 2-a) 표 해석
+##### 4-a) 표 해석
 * CohortMonth 2010-12-01(기준 달)
   
 * 코호트 인덱스 1 (기준 달로부터 첫 번째 달 뒤, 2011년 1월): 기준 달 이후 첫 번째 달인 2011년 1월에는 341명의 고객이 추가 구매함
@@ -156,7 +174,7 @@
 
 <br><br>
 
-#### 3) 전체 고객 중 활성 고객의 비율로 정의되는 유지율 계산
+#### 5) 전체 고객 중 활성 고객의 비율로 정의되는 유지율 계산
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7e84df93-8b79-4e85-8a0a-42b81e981212></h3>
 
 * 첫 번째 거래는 CohortIndex 0에 해당하기 때문에, 데이터의 첫번째 열을 코호트 크기로 사용
@@ -165,6 +183,23 @@
 
 * 쉽게 말해, 초기에 구매한 고객들 중에서 재구매를 하는 고객들의 비율을 의미함
 
+<br><br>
 
+# Retention Rates
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/d0460328-a5cb-4d2d-82da-010e00926862></h3>
+
+* 위의 유지율 히트맵에서 CohortMonth 2010–12–01에 대해 평균 ~35%의 유지율이 있으며 가장 높은 유지율은 11개월(49.3%) 후에 발생한다는 것을 알 수 있음
+
+* 다른 모든 CohortMonths의 평균 유지율은 약 18–25%
+  
+<br><br>
+
+# 📄 RFM 분류
+#### 1) 정의
+> * RFM분석은 최근 거래(Recency), 작년에 수행한 거래 수(Frequency), 거래의 금전적 가치(Monetary)를 기준으로 각 고객의 가중치를 생성하여 할당한 후에, 고객별로 세그먼트를 하는 방식이다.
+
+> * RFM분석은 가장 최근 고객은 누구였는지, 누가 우리가게에서 물건을 몇 번이나 구입했는지, 그리고 누구의 거래 총 가치는 얼마인지 등 이 모든 정보를 통해 고객이 기업에 얼마나 기여하는지 이해하는데 사용된다.
+
+> * RFM값을 얻은 후 일반적인 방법은 각 메트릭에 사분위수를 만들고 필요한 순서를 할당하는 것이다.
 
 
