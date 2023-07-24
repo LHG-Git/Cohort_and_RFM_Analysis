@@ -73,7 +73,7 @@
 
 * 따라서, 영국만 추출하여 분석 진행 
   
-<br>
+<br><br>
 
 ## 2) 고객과 상품
 ### 2-a) 총 제품 수(Stock code), 거래 수(InvoiceNo), 고객 수(CustomerID) 파악
@@ -81,7 +81,7 @@
 
 * 약 4,300명의 고객, 3,700개의 제품, 22,000건의 거래 건을 확인
 
-<br>
+<br><br>
 
 ### 2-b) 모든 거래에서 구매한 제품의 수를 확인
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/110061e7-676a-4678-b9e4-ca7c67694eac></h3>
@@ -91,30 +91,31 @@
   
 * 접두사 C가 붙은 경우, 취소된 거래를 나타냄
 
-<br> 
+<br><br>
 
+# 주문 상태
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/be3b198e-8fa4-4f70-9e09-79ae517d72ba></h3>
 
 * 약 16.47% 의 주문이 취소됨
  
-<br>
+<br><br>
 
 ## 3) Stock Code (제품 코드)
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/b3b8c676-125f-447a-8caa-73d968d7e5de></h3>
 
 * POST의 수가 가장 많고, 그 뒤로 M, C2가 뒤를 잇는다는 것을 확인
 
-<br>
+<br><br>
 
 ## 4) 총 구매 금액
-### 4-a
+### 4-a)
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/e1cbe6f4-cff7-43a2-8e2d-f557f05e3ebc></h3>
 
 * 대부분 낮은 금액의 구매로 이루어진 것을 확인
 
-<br>
+<br><br>
 
-### 4-b
+### 4-b)
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/48d5eee7-49f4-4f05-bd20-db2aaac42804></h3>
 
 * 영국을 제외한 국가들의 주문 수 확인
@@ -131,9 +132,8 @@
 
 <br><br>
 
+# 'InvoiceDate'와 'CohortMonth' 열 사이의 날짜 차이를 계산
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7435b6e0-dcf2-42a5-ab2e-b12babf8e98a></h3>
-
-* 'InvoiceDate'와 'CohortMonth' 열 사이의 날짜 차이를 계산
 
 * 날짜 차이를 30으로 나누어 월 단위로 변환
 
@@ -156,28 +156,15 @@
 
 <br><br>
 
+#### 전체 고객 중 활성 고객의 비율로 정의되는 유지율 계산
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7e84df93-8b79-4e85-8a0a-42b81e981212></h3>
 
-* 전체 고객 중 활성 고객의 비율로 정의되는 유지율 계산
-  
 * 첫 번째 거래는 CohortIndex 0에 해당하기 때문에, 데이터의 첫번째 열을 코호트 크기로 사용
 
 * 코호트 분석에서 'Retention'은 특정 기간에 첫 번째 구매를 한 고객들 중에서 그 이후에도 지속적으로 구매를 이어나가는 고객들의 비율을 나타냄
 
 * 쉽게 말해, 초기에 구매한 고객들 중에서 재구매를 하는 고객들의 비율을 의미함
 
-## 6) 모델평가 및 검증
-<h3 align="center"><img src= https://github.com/LHG-Git/project/assets/100845169/1f3ca8e2-9710-404d-9425-d9a9d3f64cdf></h3>
-
-* <strong>하이퍼파라미터 튜닝 및 K-Fold교차검증을 통하여 모델 성능 최적화를 진행하여 과적합 개선</strong>
-
-* 그 결과 이전의 결과에서 보다 <strong>과적합이 많이 개선</strong>되었음을 확인하였고 <strong>모델의 성능 또한 향상됨</strong>
-
-* 성능 지표의 경우 본 프로젝트의 주제가 ‘해양정보를 활용한 해양오염 예측’ 이기 때문에, 모델의 설명력을 나타내는 R2값 보다 실제 예측 오차의 크기인 MAE가 본 프로젝트와 맞는 지표라고 판단
-
-* <strong>최종 모델링 결과 약 MAE = 0.076으로 실제값과 약 0.076이 차이가 나는 모델 완성</strong>
-
-* 최근 10년동안 국내 연안의 화학적 산소농도가 연평균 1.13~1.82mg/L인 것을 고려했을 때, 꽤 정확도가 높은 모델이라고 설명할 수 있음
 
 
 
