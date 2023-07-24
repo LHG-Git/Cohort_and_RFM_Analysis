@@ -228,8 +228,7 @@
 <br><br>
 
 ### 3) R, F, M 속성에 점수 할당
-<h3 align="center"><img src= (https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/dcb1ea94-122b-439a-a266-4336a49e4eda)></h3>
-
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/dcb1ea94-122b-439a-a266-4336a49e4eda></h3>
 * 최근성 메트릭의 경우 가장 최근성 값이 가장 작은 고객에게 가장 높은 값인 4가 할당됨 (최신 고객이므로)
 
 * 빈도 및 금액 메트릭의 경우 가장 높은 값인 4가 각각 상위 25% 빈도 및 금액 값을 가진 고객에게 할당됨
@@ -239,8 +238,7 @@
 <br><br>
 
 ### 4) RFM 점수를 기반으로 데이터를 그룹화한 후, 다양한 RFM 점수에 대해 평균 속성 값을 비교
-<h3 align="center"><img src= (https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/6d0665f6-e3f6-41e3-80b5-fe4135e96e30)></h3>
-
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/6d0665f6-e3f6-41e3-80b5-fe4135e96e30></h3>
 * 예상대로 RFM 점수가 가장 낮은 고객은 최근성이 가장 높고, 빈도 및 금전적 가치가 가장 낮음
 
 * 
