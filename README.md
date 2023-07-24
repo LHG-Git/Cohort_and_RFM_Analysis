@@ -294,8 +294,18 @@
 ##### b-2) 왜도 제거
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7dd4ad0a-e1c6-434f-babe-5ee698b0875b></h3>
 
+<br><br>
 
+### 7) K-means Clustering
+#### 7-a) Elbow Method
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/a3a6c1bc-6496-4ae0-bb17-7bce248bc548></h3>
 
+* 최적의 K값 3, 4, 5를 구함
+
+<br><br>
+
+### 8) K = 3, 4, 5 각 값에 대한 세그먼트 해석
+![image](https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/78453fd4-f4e3-441c-9185-52f2dae89150)
 
 
 
