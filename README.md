@@ -213,6 +213,7 @@
 
 #### 2-a) 세그먼트 분할
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/113b5a14-973c-4071-a72e-7ed44199a5f7></h3>
+
 * 그런 다음 해당 데이터를 4개의 분위수 세그먼트로 나눔
 
 * 이때 분위수는 [25%ile, 50%ile, 75%ile]에서 나눔
@@ -229,6 +230,7 @@
 
 ### 3) R, F, M 속성에 점수 할당
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/dcb1ea94-122b-439a-a266-4336a49e4eda></h3>
+
 * 최근성 메트릭의 경우 가장 최근성 값이 가장 작은 고객에게 가장 높은 값인 4가 할당됨 (최신 고객이므로)
 
 * 빈도 및 금액 메트릭의 경우 가장 높은 값인 4가 각각 상위 25% 빈도 및 금액 값을 가진 고객에게 할당됨
