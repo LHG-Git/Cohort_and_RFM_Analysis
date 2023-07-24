@@ -212,8 +212,7 @@
 <br><br>
 
 #### 2-a) 세그먼트 분할
-<h3 align="center"><img src= (https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/113b5a14-973c-4071-a72e-7ed44199a5f7)></h3>
-
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/113b5a14-973c-4071-a72e-7ed44199a5f7></h3>
 * 그런 다음 해당 데이터를 4개의 분위수 세그먼트로 나눔
 
 * 이때 분위수는 [25%ile, 50%ile, 75%ile]에서 나눔
