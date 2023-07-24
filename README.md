@@ -304,7 +304,7 @@
 
 <br><br>
 
-### 8) K = 3, 4, 5 각 값에 대한 세그먼트 해석
+#### 7-b) K = 3, 4, 5 각 값에 대한 세그먼트 해석
 ![image](https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/78453fd4-f4e3-441c-9185-52f2dae89150)
 
 
