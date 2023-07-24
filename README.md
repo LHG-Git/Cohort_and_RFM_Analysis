@@ -239,11 +239,54 @@
 
 ### 4) RFM 점수를 기반으로 데이터를 그룹화한 후, 다양한 RFM 점수에 대해 평균 속성 값을 비교
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/6d0665f6-e3f6-41e3-80b5-fe4135e96e30></h3>
+
 * 예상대로 RFM 점수가 가장 낮은 고객은 최근성이 가장 높고, 빈도 및 금전적 가치가 가장 낮음
 
-* 
+<br><br>
 
+### 5) 범주 정의
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/563a3e1a-70e0-4856-85ac-56aa164eed01></h3>
 
+* RFM_Score가 9 이상인 고객은 '상위' 범주
+  
+* RFM_Score가 5~9 사이인 고객은 '중간' 범주
+  
+* RFM_Score가 나머지인 고객은 '낮음' 범주
+
+### 6) 왜도 제거
+* RFM 점수에서 Kmeans 클러스터링을 위한 데이터를 준비할 것들
+  
+> * 변수는 대칭적으로 분포되어야 한다.
+> * 변수는 평균값이 유사해야 한다.
+> * 변수는 표준편차 값이 유사해야 한다.
+
+<br><br>
+
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/6b5cb92a-c0e8-4531-84ff-5c99f03f0756></h3>
+
+* 안타깝게도 모든 변수는 대칭이 아님, 모두 오른쪽으로 치우쳐져있기 때문에, 왜도를 제거할 필요가 있음
+  
+* 왜도는 분포의 비대칭 정도를 측정하는 지표로서, 변수의 분포가 얼마나 대칭이 아닌지를 나타냄, 왜도는 주로 데이터의 분포를 확인하고 이상치를 탐지하거나 변수 변환을 위해 사용됨
+
+<br><br>
+
+#### 6-a) 왜도의 값에 따라 분포의 특성 해석
+* 왜도 값이 0에 가까울 경우: 데이터의 분포가 대칭에 가까움을 의미
+
+* 왜도 값이 0보다 큰 양수일 경우: 오른쪽으로 치우친 분포를 가진 양의 왜도를 가짐. 오른쪽으로 꼬리가 긴 분포를 의미
+
+* 왜도 값이 0보다 작은 음수일 경우: 왼쪽으로 치우친 분포를 가진 음의 왜도를 가짐. 왼쪽으로 꼬리가 긴 분포를 의미
+
+> * 왜도 값을 확인하여 변수가 대칭인지 아닌지를 파악하고, 대칭이 아닌 경우 데이터 변환을 고려할 수 있다. 로그 변환, 제곱근 변환, Box-Cox 변환 등을 사용하여 데이터를 변환하면 대칭성을 높일 수 있다. 이를 통해 분석의 정확성을 높이고 모델의 성능을 개선할 수 있다.
+
+#### 6-b) 로그 변환을 통한 왜도 제거
+##### 로그 변환
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/10a431d6-2dfc-412b-98e9-aa7724541234></h3>
+
+* 로그 변환을 수행하고 날짜를 표준화
+
+##### 왜도 제거
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7dd4ad0a-e1c6-434f-babe-5ee698b0875b></h3>
 
 
 
