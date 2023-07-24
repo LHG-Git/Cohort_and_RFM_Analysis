@@ -1,4 +1,4 @@
-# Cohort_and_RFM_Analysis
+![image](https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/062c8d74-c721-4905-a4ea-cf33bf7487dc)# Cohort_and_RFM_Analysis
 📈 전자상거래 고객 세분화 분석
 <div align="center">
   <h1>📈 개인 프로젝트<br><br>
@@ -48,6 +48,7 @@
 
 * 고객 세분화의 통찰력은 맞춤형 마케팅 캠페인을 개발하고 전반적인 마케팅 전략 및 계획을 설계하는 데 사용됨
 
+<br><br>
 
 # 🔎 데이터 수집
 |데이터셋|출처|
@@ -59,8 +60,8 @@
 # 🔎 데이터 전처리
 |전처리|방법|
 |------|:-------------:|
-|결측치 제거|약 25%가 Nan값으로 채워져있기 때문에 해당 컬럼 삭제|
-|중복값 제거(MinMaxScaler)|5,225개의 중복값 삭제|
+|결측치 제거|약 25%가 Nan값으로 채워져 있는 컬럼 삭제|
+|중복값 제거|5,225개의 중복값 삭제|
 
 <br><br>
 
@@ -98,7 +99,7 @@
  
 <br>
 
-## 3) Stock Code
+## 3) Stock Code (제품 코드)
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/b3b8c676-125f-447a-8caa-73d968d7e5de></h3>
 
 * POST의 수가 가장 많고, 그 뒤로 M, C2가 뒤를 잇는다는 것을 확인
@@ -120,42 +121,50 @@
 
 <br><br>
 
-# 📄 Modeling
-## 1) 군집화
-<h3 align="center"><img src= https://github.com/LHG-Git/project/assets/100845169/e22674c7-b20e-4298-b8bc-b7b9f2f4583a></h3>
+# 📄 코호트 분석
+#### 정의
+> * 코호트는 시간의 흐름에 따라 유사한 특성을 가진 사용자들의 집합
 
-* 최적의 k값 도출을 위해 <strong>실루엣 계수</strong>를 사용<br> 
-* 이때 실루엣 계수 평균만을 고려하지 않았고 figure5를 통해 도출된 인사이트를 함께 고려<br>
-* 그 결과 cluster별 실루엣 계수 평균이 가장 높지는 않지만, 실루엣 계수의 너비가 비교적 균일한 지점에서 <strong>최적의 k(k=6)값을 도출</strong><br><br>
+> * 코호트 분석은 사용자를 상호 배타적인 그룹으로 그룹화하고 그들의 행동은 시간의 경과에 따라 측정된다.
 
-<h3 align="center"><img src= https://github.com/LHG-Git/project/assets/100845169/909e7b1d-0b40-4745-abc5-f3652ef06a84></h3>
+> * 코호트 분석은 고객들을 기준으로 초기 달(기준 달)에 얼마나 많은 고객이 구매를 했는지를 파악하고, 이후의 각 달에 해당 기준 달과 비교하여 추가 구매를 하는 고객 수를 살펴본다. 따라서 각 코호트 인덱스(월)는 해당 월에 기준 달로부터 얼마나 많은 고객이 추가 구매를 했는지를 나타낸다.
 
-* 최적의 K값을 통해 위치별 군집화 결과, figure 5에서 인천 부근의 서해에 위치한 관측치와, 부산 부근의 남해에 위치한 관측치에서 화학적 산소농도 수치가 높게 기록
+<br><br>
+
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7435b6e0-dcf2-42a5-ab2e-b12babf8e98a></h3>
+
+* 'InvoiceDate'와 'CohortMonth' 열 사이의 날짜 차이를 계산
+
+* 날짜 차이를 30으로 나누어 월 단위로 변환
+
+* dt.days를 통해 소수점을 버리고 정수형 데이터로 반환
+
+* 정수형 데이터로 형변환
+
+* 0은 첫 번째 달(기준 달)을 의미
+
 <br>
 
-## 2) 모델 성능 지표 선정
-* 성능 지표의 경우 본 프로젝트의 주제 자체가 ‘해양정보를 활용한 해양오염 예측’이기 때문에, 모델의 설명력을 나타내는 R2값 보다 실제 예측 오차의 크기인 MAE가 본 프로젝트와 맞는 지표라고 생각하여, <strong>MAE값을 기준으로 최종 모델을 선정</strong>
-<br>
+#### 표 해석
+* CohortMonth 2010-12-01(기준 달)
+  
+* 코호트 인덱스 1 (기준 달로부터 첫 번째 달 뒤, 2011년 1월): 기준 달 이후 첫 번째 달인 2011년 1월에는 341명의 고객이 추가 구매함
+  
+* 코호트 인덱스 2 (기준 달로부터 두 번째 달 뒤, 2011년 2월): 기준 달 이후 두 번째 달인 2011년 2월에는 339명의 고객이 추가 구매함
+                                                     ...
+* 코호트 인덱스 12 (기준 달로부터 열두 번째 달 뒤, 2011년 12월): 기준 달 이후 열한 번째 달인 2011년 11월에는 467명의 고객이 추가 구매함.
 
-## 3) 최종 모델 선정
-<h3 align="center"><img src= https://github.com/LHG-Git/project/assets/100845169/da4b5525-0513-4615-a954-9778eadeda55></h3>
+<br><br>
 
-* 최종 예측결과 전체 모델에서 훈련세트에 <strong>약간의 과적합 존재</strong><br>
-* <strong>CatBoost모델의 MAE값이 가장 준수</strong>
-* 해양오염 예측에 사용될 모델을 <strong>CatBoostRegressor로 선정</strong>
-<br>
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/7e84df93-8b79-4e85-8a0a-42b81e981212></h3>
 
-## 4) 하이퍼파라미터 튜닝
-* CatBoostRegressor모델의 특성상 하이퍼파라미터 튜닝을 진행하여도 모델 성능 개선에 크게 영향을 미치지 않음
-* 오히려 파라미터의 default값으로 모델 예측을 수행하였을 때, 성능이 가장 높게 측정됨
-<br>
+* 전체 고객 중 활성 고객의 비율로 정의되는 유지율 계산
+  
+* 첫 번째 거래는 CohortIndex 0에 해당하기 때문에, 데이터의 첫번째 열을 코호트 크기로 사용
 
-## 5) K-Fold 교차검증
-* 최종 선정된 모델(CatBoostRegressor)의 경우 train과 text의 성능 지표에서 약간의 과적합이 발생
-* 과적합을 방지하기 위해 valid data를 생성
-* 해당 데이터셋을 이용하여 가장 흔하게 사용되는 <strong>K-Fold 교차검증을 진행</strong>
-* <strong>K값은 5로 지정</strong>하였으며, 모델 진행시에 골고루 데이터의 특성을 반영하기 위하여 <strong>shuffle을 진행</strong>
-<br>
+* 코호트 분석에서 'Retention'은 특정 기간에 첫 번째 구매를 한 고객들 중에서 그 이후에도 지속적으로 구매를 이어나가는 고객들의 비율을 나타냄
+
+* 쉽게 말해, 초기에 구매한 고객들 중에서 재구매를 하는 고객들의 비율을 의미함
 
 ## 6) 모델평가 및 검증
 <h3 align="center"><img src= https://github.com/LHG-Git/project/assets/100845169/1f3ca8e2-9710-404d-9425-d9a9d3f64cdf></h3>
