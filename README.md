@@ -237,6 +237,8 @@
 
 * 측정항목을 사분위수로 나눈 후 RFM 사분위수 측정항목을 합산하여 RFM_Score를 계산하고 문자열로 조합하여 RFM_Segment를 계산
 
+<br><br>
+
 ### 4) RFM 점수를 기반으로 데이터를 그룹화한 후, 다양한 RFM 점수에 대해 평균 속성 값을 비교
 <h3 align="center"><img src= (https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/6d0665f6-e3f6-41e3-80b5-fe4135e96e30></h3>
 
