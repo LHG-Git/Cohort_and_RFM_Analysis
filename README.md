@@ -1,4 +1,4 @@
-![image](https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/062c8d74-c721-4905-a4ea-cf33bf7487dc)# Cohort_and_RFM_Analysis
+# Cohort_and_RFM_Analysis
 📈 전자상거래 고객 세분화 분석
 <div align="center">
   <h1>📈 개인 프로젝트<br><br>
