@@ -327,7 +327,7 @@
 <br><br>
 
 ### 📋 결론
-<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/791a728f-7ebc-425a-a971-82d900cc402e></h3>
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/507b643a-88d6-4bc7-affe-f3808409d48d></h3>
 
 * 위의 분석에서 데이터에 4개의 클러스터가 있어야 함을 알 수 있음
   
