@@ -79,6 +79,8 @@
 ### 2-a) 총 제품 수(Stock code), 거래 수(InvoiceNo), 고객 수(CustomerID) 파악
 <h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/72805b80-36c0-4469-b778-bba6c5bd882f></h3>
 
+<br>
+
 * 약 4,300명의 고객, 3,700개의 제품, 22,000건의 거래 건을 확인
 
 <br><br>
