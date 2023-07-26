@@ -305,9 +305,30 @@
 <br><br>
 
 #### 7-b) K = 3, 4, 5 각 값에 대한 세그먼트 해석
-![image](https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/78453fd4-f4e3-441c-9185-52f2dae89150)
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/78453fd4-f4e3-441c-9185-52f2dae89150></h3>
 
+* 위 스네이크 플롯에서, 군집들 사이의 최근성, 빈도, 그리고 금액 지표 값들의 분포 확인 가능
 
+* 군집들은 서로 분리되어 있어서, 군집들 사이에 다양성이 있는 좋은 혼합을 나타냄
 
+* K=3이 가장 적합한 클러스터라고 해석할 수 있음
+
+<br><br>
+
+#### 7-c 각 군집에 대한 각 속성의 상대적 중요도
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/f53e2a71-4076-4408-ae60-547ebbe3ca05></h3>
+
+* 각 군집의 속성 평균값을 전체 인구 평균으로 나누어 계산
+
+<br><br>
+
+### 📋 결론
+<h3 align="center"><img src= https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/791a728f-7ebc-425a-a971-82d900cc402e></h3>
+
+* 위의 분석에서 데이터에 4개의 클러스터가 있어야 함을 알 수 있음
+  
+* 비즈니스 시나리오에서 이 4개의 클러스터가 의미하는 바를 이해하려면 R, F, M의 평균값에 대해 3개 클러스터와 4개 클러스터의 클러스터링 성능을 비교하는 표를 다시 살펴봐야 함
+  
+* 이를 바탕으로 클러스터에 '새로운 고객', '잃어버린 고객', '위험 고객', '우수 고객'으로 레이블을 지정하면 좋을것이라 판단함
 
 
