@@ -18,8 +18,9 @@
    <tr/>
 </tbody>
 </table>
-
 <br>
+<h3 align="center"><img src="https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/24d68a36-ab32-4eaa-b4f2-6875f23bc41c"></h3>
+
 
 # 🔊 프로젝트 개요
 * 고객 세분화에는 많은 잠재적 이점이 존재
