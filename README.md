@@ -19,7 +19,7 @@
 </tbody>
 </table>
 <br>
-<h3 align="center"><img src="https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/4348ece8-2f63-45f2-a452-6027730fa453" height = 600px></h3>
+<h3 align="center"><img src="https://github.com/LHG-Git/Cohort_and_RFM_Analysis/assets/100845169/b305daa9-23ba-41a5-8b92-e5533c360f04" height = 600px></h3>
 
 
 # 🔊 프로젝트 개요
